@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediva | Contact Us</title>
+  <meta name="description" content="Contact Mediva Pharmacy for medication questions, compounding inquiries, or to speak with our clinical team.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Mediva.</a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="diabetic-care.html" class="nav-link">Diabetic Care</a></li>
+          <li><a href="prescription.html" class="nav-link">Prescription</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+      
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hamburger Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <div class="drawer-header">
+      <span class="logo">Mediva.</span>
+      <button class="close-drawer" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home2.html">Home 2</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html">Prescription</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-toggles" style="justify-content: center;">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-left-right">
+            <path d="M8 3 4 7l4 4" />
+            <path d="M4 7h16" />
+            <path d="m16 21 4-4-4-4" />
+            <path d="M20 17H4" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1 style="font-size: var(--text-h2);">Get in Touch</h1>
+          <p>Have a question about your medication or our services? Our clinical team is here to help.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; margin-bottom: var(--spacing-12);">
+        
+        <!-- Contact Form -->
+        <div style="background-color: var(--surface-color); padding: var(--spacing-6); border-radius: var(--border-radius); box-shadow: var(--shadow-soft);">
+          <h3 style="margin-bottom: 1.5rem;">Send us a Message</h3>
+          <form action="https://formspree.io/f/placeholder" method="POST" data-validate="true" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-control">
+                <option value="general">General Inquiry</option>
+                <option value="compounding">Compounding Services</option>
+                <option value="delivery">Home Delivery</option>
+                <option value="diabetic">Diabetic Care</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <!-- Inline success placeholder -->
+            <div class="form-success-message" style="display: none; background-color: rgba(56, 161, 105, 0.1); color: var(--success-color); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--success-color);">
+              Message sent successfully! We will get back to you shortly.
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div style="text-align: center;">
+          <div style="margin-bottom: 2rem;">
+            <h3 style="margin-bottom: 1rem; text-align: center;">Pharmacy Information</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1rem; color: var(--text-secondary);">
+              <li style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" style="color: var(--primary-color);"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>123 Wellness Blvd.<br>Suite 100, Healthcare District<br>Cityville, ST 12345</span>
+              </li>
+              <li style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone" style="color: var(--primary-color);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>(555) 123-4567</span>
+              </li>
+              <li style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" style="color: var(--primary-color);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>care@mediva-placeholder.com</span>
+              </li>
+            </ul>
+
+            <!-- Social Media Icons -->
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-primary); margin-bottom: 0.75rem; text-align: center;">Follow Us</h4>
+              <div style="display: flex; gap: 0.75rem; justify-content: center;">
+                <a href="#" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: var(--primary-soft); color: var(--primary-color); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.backgroundColor='var(--primary-color)'; this.style.color='#fff'; this.style.transform='translateY(-4px) scale(1.15)';" onmouseout="this.style.backgroundColor='var(--primary-soft)'; this.style.color='var(--primary-color)'; this.style.transform='none';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: var(--primary-soft); color: var(--primary-color); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.backgroundColor='var(--primary-color)'; this.style.color='#fff'; this.style.transform='translateY(-4px) scale(1.15)';" onmouseout="this.style.backgroundColor='var(--primary-soft)'; this.style.color='var(--primary-color)'; this.style.transform='none';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: var(--primary-soft); color: var(--primary-color); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.backgroundColor='var(--primary-color)'; this.style.color='#fff'; this.style.transform='translateY(-4px) scale(1.15)';" onmouseout="this.style.backgroundColor='var(--primary-soft)'; this.style.color='var(--primary-color)'; this.style.transform='none';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: var(--primary-soft); color: var(--primary-color); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.backgroundColor='var(--primary-color)'; this.style.color='#fff'; this.style.transform='translateY(-4px) scale(1.15)';" onmouseout="this.style.backgroundColor='var(--primary-soft)'; this.style.color='var(--primary-color)'; this.style.transform='none';">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768"/><path d="M20 4l-6.768 6.768"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="margin-bottom: 1rem; text-align: center;">Hours of Operation</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-secondary);">
+              <li>Monday - Friday: 8:00 AM - 7:00 PM</li>
+              <li>Saturday: 9:00 AM - 3:00 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+            <p style="margin-top: 1rem; color: var(--error-color); font-weight: 500; font-size: 0.9rem; text-align: center;">For medical emergencies outside of these hours, please dial 911 or visit the nearest emergency room.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Google Maps Section (Separate Full-Width Section) -->
+    <section class="container" style="padding-top: 0; padding-bottom: var(--spacing-12);">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--spacing-6);">
+        <span class="eyebrow">Our Location</span>
+        <h2>Find Us in the City</h2>
+      </div>
+      <div style="border-radius: var(--radius-xl); overflow: hidden; height: 400px; background-color: var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); box-shadow: var(--shadow-soft);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6173295982845!2d-73.98785312344754!3d40.74844047138933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="container">
+      <div class="cta-banner" data-reveal>
+        <div class="cta-banner-body">
+          <h2>Ready to transfer your prescription?</h2>
+          <p>Send us your details and we handle the paperwork with your current pharmacy — pickup or home delivery, your choice.</p>
+          <a href="prescription.html" class="btn btn-light">Submit Prescription</a>
+        </div>
+        <span class="cta-banner-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15h6"/></svg>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="display: block; margin-bottom: 1rem;">Mediva.</a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Licensed Independent Pharmacy & Compounding Center. Providing expert clinical care to the community.</p>
+          <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-secondary);">License #PH-9923841</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="prescription.html#delivery">Home Delivery</a></li>
+            <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html">Prescription</a></li>
+            <li><a href="prescription.html">Submit Prescription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours & Location</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>123 Wellness Blvd.</li>
+            <li>Suite 100, Healthcare District</li>
+            <li style="margin-top: 1rem;">Mon - Fri: 8:00 AM - 7:00 PM</li>
+            <li>Saturday: 9:00 AM - 3:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>Phone: (555) 123-4567</li>
+            <li>Fax: (555) 123-4568</li>
+            <li style="margin-top: 1rem; color: var(--error-color); font-weight: 500;">Emergency After-Hours:</li>
+            <li>Call 911 or proceed to nearest ER.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mediva Pharmacy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

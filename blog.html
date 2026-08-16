@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediva | Health & Education Blog</title>
+  <meta name="description" content="Read educational articles on medication safety, diabetic care, and custom compounding from Mediva's clinical pharmacists.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Mediva.</a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="diabetic-care.html" class="nav-link">Diabetic Care</a></li>
+          <li><a href="prescription.html" class="nav-link">Prescription</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+      
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hamburger Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <div class="drawer-header">
+      <span class="logo">Mediva.</span>
+      <button class="close-drawer" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home2.html">Home 2</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html">Prescription</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-toggles" style="justify-content: center;">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-left-right">
+            <path d="M8 3 4 7l4 4" />
+            <path d="M4 7h16" />
+            <path d="m16 21 4-4-4-4" />
+            <path d="M20 17H4" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1 style="font-size: var(--text-h2);">Health & Education</h1>
+          <p>Insights, advice, and clinical news from our expert pharmacists.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+
+      <div class="card-grid grid-3up" style="margin-bottom: var(--spacing-12); row-gap: var(--spacing-6);">
+        <!-- Blog Post 1 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blood sugar test" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Diabetic Care</span>
+                <span>Oct 12, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">Understanding Continuous Glucose Monitors (CGMs)</a></h3>
+              <p>CGMs have revolutionized diabetes management by providing real-time data without fingersticks. But which one is right for you?</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Compounding medication" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Compounding</span>
+                <span>Sep 28, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">What Exactly Is Pharmacy Compounding?</a></h3>
+              <p>Not all medications come in a one-size-fits-all dosage. Learn how our sterile lab creates personalized medication solutions.</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pills and supplements" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Safety</span>
+                <span>Sep 15, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">Avoiding Dangerous OTC Interactions</a></h3>
+              <p>Even common over-the-counter drugs can interact poorly with prescriptions. Here is what you should always ask your pharmacist.</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pediatric medicine tips" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Pediatrics</span>
+                <span>Aug 28, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">Tips for Kids Who Resist Medication</a></h3>
+              <p>Struggling to get your toddler to swallow medicine? Our team offers custom compounding flavors and creative strategies.</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Consultation" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Hormone Care</span>
+                <span>Aug 12, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">Hormonal Balance & Healthy Aging</a></h3>
+              <p>Learn how customized bioidentical hormones can help address imbalances and improve overall vitality as we age.</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="card post-card">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dog at home" class="post-card-img">
+          <div class="post-card-body">
+            <div>
+              <div class="post-meta">
+                <span class="post-tag">Veterinary</span>
+                <span>Jul 30, 2026</span>
+              </div>
+              <h3><a href="blog-single.html">Giving Compounded Meds to Pets</a></h3>
+              <p>Administering medicine to a pet can be tough. Vets explain how transdermal gels and custom flavors simplify the process.</p>
+            </div>
+            <a href="blog-single.html" class="post-link">Read More &rarr;</a>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="container">
+      <div class="cta-banner" data-reveal>
+        <div class="cta-banner-body">
+          <h2>Questions about your medication?</h2>
+          <p>Our clinical pharmacists answer real patient questions every day. Book a consultation and get guidance tailored to your prescriptions.</p>
+          <a href="contact.html" class="btn btn-light">Talk to a Pharmacist</a>
+        </div>
+        <span class="cta-banner-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="display: block; margin-bottom: 1rem;">Mediva.</a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Licensed Independent Pharmacy & Compounding Center. Providing expert clinical care to the community.</p>
+          <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-secondary);">License #PH-9923841</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="prescription.html#delivery">Home Delivery</a></li>
+            <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html">Prescription</a></li>
+            <li><a href="prescription.html">Submit Prescription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours & Location</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>123 Wellness Blvd.</li>
+            <li>Suite 100, Healthcare District</li>
+            <li style="margin-top: 1rem;">Mon - Fri: 8:00 AM - 7:00 PM</li>
+            <li>Saturday: 9:00 AM - 3:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>Phone: (555) 123-4567</li>
+            <li>Fax: (555) 123-4568</li>
+            <li style="margin-top: 1rem; color: var(--error-color); font-weight: 500;">Emergency After-Hours:</li>
+            <li>Call 911 or proceed to nearest ER.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mediva Pharmacy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

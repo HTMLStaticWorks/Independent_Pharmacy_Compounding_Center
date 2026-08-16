@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediva | Submit Prescription & Delivery</title>
+  <meta name="description" content="Submit your new prescription or request a refill online. Learn about Mediva's fast and discreet home delivery service.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Mediva.</a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="diabetic-care.html" class="nav-link">Diabetic Care</a></li>
+          <li><a href="prescription.html" class="nav-link active">Prescription</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+      
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hamburger Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <div class="drawer-header">
+      <span class="logo">Mediva.</span>
+      <button class="close-drawer" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home2.html">Home 2</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html" class="active">Prescription</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-toggles" style="justify-content: center;">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-left-right">
+            <path d="M8 3 4 7l4 4" />
+            <path d="M4 7h16" />
+            <path d="m16 21 4-4-4-4" />
+            <path d="M20 17H4" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Prescription Form Section -->
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Secure Intake</span>
+          <h1 style="font-size: var(--text-h2);">Submit Your Prescription</h1>
+          <p>Fast, secure, and HIPAA-compliant processing for your medication.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prescription-form" class="container">
+
+      <div class="form-shell">
+        
+        <form data-validate="true" novalidate id="rxForm">
+          <!-- Prescription Placeholder Endpoint -->
+          <!-- action="https://secure-hipaa-endpoint.placeholder.com/submit" method="POST" enctype="multipart/form-data" -->
+
+          <div style="background-color: rgba(47, 107, 138, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock" style="color: var(--primary-color); flex-shrink: 0;"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <p style="font-size: 0.9rem; margin-bottom: 0;"><strong>Privacy & Confidentiality Notice:</strong> Your information is transmitted securely. We adhere to strict HIPAA guidelines. Only our licensed pharmacists and clinical staff will review your submission.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="rx_type">Request Type *</label>
+            <select id="rx_type" name="rx_type" class="form-control" required onchange="toggleFileUpload(this.value)">
+              <option value="">Select an option</option>
+              <option value="new">New Prescription (Upload Required)</option>
+              <option value="refill">Refill (Already on file)</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="file_upload_group" style="display: none;">
+            <label class="form-label" for="rx_file">Upload Prescription (JPG, PNG, PDF) *</label>
+            <input type="file" id="rx_file" name="rx_file" class="form-control" accept=".jpg,.jpeg,.png,.pdf">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Max file size: 5MB. Ensure the doctor's name, your name, and medication details are clearly visible.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first_name">First Name *</label>
+              <input type="text" id="first_name" name="first_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last_name">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="doctor_name">Prescribing Doctor (Optional)</label>
+            <input type="text" id="doctor_name" name="doctor_name" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="fulfillment">Fulfillment Method *</label>
+            <select id="fulfillment" name="fulfillment" class="form-control" required>
+              <option value="">Select an option</option>
+              <option value="pickup">In-Store Pickup</option>
+              <option value="delivery">Home Delivery</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notes">Notes or Special Instructions (Optional)</label>
+            <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="e.g., Allergies, compounding flavors..."></textarea>
+          </div>
+
+          <!-- Inline Success Message (Hidden by default) -->
+          <div class="form-success-message" style="display: none; background-color: rgba(56, 161, 105, 0.1); color: var(--success-color); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--success-color);">
+            <strong style="display: block; margin-bottom: 0.25rem;">Prescription Submitted Successfully!</strong>
+            Our pharmacists are reviewing your request. We will contact you at the provided phone number to confirm fulfillment details.
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Securely Submit Request</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Interactive: Plan your fulfillment (no images) -->
+    <section class="surface-band">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Plan ahead</span>
+          <h2>Know what to expect before you submit</h2>
+          <p>Answer three questions for a live turnaround estimate — and open any question below for the detail.</p>
+        </div>
+
+        <div class="panel-split">
+          <!-- Accordion -->
+          <div class="accordion" data-accordion="single" data-reveal>
+            <div class="accordion-item open">
+              <button class="accordion-trigger" aria-expanded="true">
+                What happens after I hit submit?
+                <span class="accordion-marker" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel-inner">
+                  <p>Your submission lands in an encrypted queue that only licensed staff can open. A pharmacist verifies the prescriber, checks your profile for interactions and duplicate therapy, then runs your insurance.</p>
+                  <p>If anything needs clarifying we call your prescriber directly — you don't have to chase it. You get an SMS at intake and again the moment your medication is ready.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Why do compounded prescriptions take longer?
+                <span class="accordion-marker" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel-inner">
+                  <p>A compounded preparation is made from raw ingredients rather than pulled off a shelf. The pharmacist selects the base, calculates the strength, prepares it in our sterile lab and then documents a quality check before release.</p>
+                  <p>That process runs 24–48 hours for most formulations. Priority handling can bring it to roughly 24 hours where the formulation allows.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Which insurance plans do you accept?
+                <span class="accordion-marker" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel-inner">
+                  <p>We bill most major commercial plans, Medicare Part D and state Medicaid. Compounded preparations are handled plan-by-plan, so we verify coverage before we begin and tell you the out-of-pocket figure first.</p>
+                  <p>If a medication isn't covered, we look for a therapeutically equivalent option or a discount-card price and walk you through both.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                How is my health information protected?
+                <span class="accordion-marker" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel-inner">
+                  <p>Submissions are transmitted over an encrypted connection and stored under HIPAA-compliant controls. Access is limited to the licensed pharmacists and clinical staff working your request, and every access is logged.</p>
+                  <p>We never sell or share your information for marketing, and delivery packaging carries no indication of its contents.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                Can I transfer a prescription from another pharmacy?
+                <span class="accordion-marker" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel-inner">
+                  <p>Yes — choose "Refill" above and note the current pharmacy in the instructions field. We contact them, pull the remaining refills across, and confirm with you once the transfer clears. It usually takes a few hours on a business day.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live estimator -->
+          <div class="calc-card" data-estimator data-reveal data-reveal-delay="120">
+            <h3>Turnaround estimator</h3>
+            <p>Indicative only — your pharmacist confirms the real timing after review.</p>
+
+            <fieldset style="border: none; margin-top: 1.5rem;">
+              <legend class="form-label">Medication type</legend>
+              <div class="option-group">
+                <label class="option">
+                  <input type="radio" name="est_type" value="standard" checked>
+                  <span class="option-title">Standard</span>
+                  <span class="option-meta">Off-the-shelf fill</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="est_type" value="compounded">
+                  <span class="option-title">Compounded</span>
+                  <span class="option-meta">Made to order</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset style="border: none;">
+              <legend class="form-label">Fulfillment method</legend>
+              <div class="option-group">
+                <label class="option">
+                  <input type="radio" name="est_method" value="pickup" checked>
+                  <span class="option-title">Pickup</span>
+                  <span class="option-meta">At our counter</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="est_method" value="delivery">
+                  <span class="option-title">Delivery</span>
+                  <span class="option-meta">To your door</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset style="border: none;">
+              <legend class="form-label">Speed</legend>
+              <div class="option-group">
+                <label class="option">
+                  <input type="radio" name="est_speed" value="standard" checked>
+                  <span class="option-title">Standard</span>
+                  <span class="option-meta">No added fee</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="est_speed" value="priority">
+                  <span class="option-title">Priority</span>
+                  <span class="option-meta">Front of queue</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="calc-readout">
+              <div class="calc-row">
+                <span>Estimated preparation</span>
+                <span class="calc-value" data-out="ready">—</span>
+              </div>
+              <div class="calc-row">
+                <span>Courier fee</span>
+                <span class="calc-value" data-out="fee">—</span>
+              </div>
+              <div class="calc-row total">
+                <span>Added cost</span>
+                <strong class="calc-value" data-out="total">—</strong>
+              </div>
+              <p class="calc-note" data-out="note"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Info Section -->
+    <section id="delivery" style="padding-top: var(--spacing-12);">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Home delivery</span>
+          <h2>Follow your order, stage by stage</h2>
+          <p>Discreet, reliable delivery of your custom and standard prescriptions. Select a stage to see what happens.</p>
+        </div>
+
+        <!-- Interactive delivery tracker -->
+        <div class="delivery-shell" data-tracker data-reveal>
+          <div class="tracker-modes" role="group" aria-label="Prescription type">
+            <button class="tracker-mode" type="button" data-mode="standard" aria-pressed="true">Standard prescription</button>
+            <button class="tracker-mode" type="button" data-mode="compounded" aria-pressed="false">Compounded prescription</button>
+          </div>
+
+          <div class="tracker">
+            <span class="tracker-fill" aria-hidden="true"></span>
+
+            <button class="tracker-step current" type="button">
+              <span class="tracker-dot">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/></svg>
+              </span>
+              <span>
+                <span class="tracker-label">Received</span>
+                <span class="tracker-time">0 min</span>
+              </span>
+            </button>
+
+            <button class="tracker-step" type="button">
+              <span class="tracker-dot">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M13 22a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V4a2 2 0 0 0-2-2h-1"/></svg>
+              </span>
+              <span>
+                <span class="tracker-label">Pharmacist review</span>
+                <span class="tracker-time">~30 min</span>
+              </span>
+            </button>
+
+            <button class="tracker-step" type="button">
+              <span class="tracker-dot">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+              </span>
+              <span>
+                <span class="tracker-label">Filled &amp; sealed</span>
+                <span class="tracker-time">~2 hrs</span>
+              </span>
+            </button>
+
+            <button class="tracker-step" type="button">
+              <span class="tracker-dot">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              </span>
+              <span>
+                <span class="tracker-label">Out for delivery</span>
+                <span class="tracker-time">Same day</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="tracker-detail" aria-live="polite">
+            <h4>Received</h4>
+            <p>Your prescription lands in our secure queue and is time-stamped.</p>
+          </div>
+
+          <dl class="tracker-meta">
+            <div>
+              <dt>Typical door-to-door</dt>
+              <dd data-track-out="eta">Same or next business day</dd>
+            </div>
+            <div>
+              <dt>Preparation window</dt>
+              <dd data-track-out="prep">1–3 hours</dd>
+            </div>
+            <div>
+              <dt>Delivery radius</dt>
+              <dd>15 miles — free over $50</dd>
+            </div>
+          </dl>
+
+          <form class="zip-check" data-zip-check novalidate>
+            <label class="form-label" for="zip" style="width: 100%;">Check if we deliver to you</label>
+            <input class="form-control" id="zip" name="zip" type="text" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" autocomplete="postal-code">
+            <button class="btn btn-primary" type="submit">Check availability</button>
+          </form>
+          <div class="zip-result" role="status"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; margin-top: var(--spacing-8);">
+
+          <div data-reveal style="text-align: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3 style="margin: 0;">Service Area</h3>
+            </div>
+            <p>We offer localized courier delivery within a 15-mile radius of our pharmacy. For compounded medications requiring shipping outside this radius, we partner with specialized temperature-controlled medical couriers. <br><br><strong>Current Delivery Fee:</strong> Free for orders over $50 within the 15-mile radius. Standard rates apply otherwise.</p>
+          </div>
+
+          <div data-reveal data-reveal-delay="120" style="text-align: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 style="margin: 0;">Timing & Tracking</h3>
+            </div>
+            <p><strong>Standard Prescriptions:</strong> Typically delivered the same or next business day.<br><strong>Compounded Prescriptions:</strong> Due to the custom preparation process, compounding takes 24-48 hours. Delivery will be scheduled immediately upon completion.<br><br>You will receive SMS notifications with tracking details once your package is out for delivery.</p>
+            <p style="margin-top: 1rem;"><a href="contact.html" style="font-weight: 500;">Contact us about a pending delivery &rarr;</a></p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="container">
+      <div class="cta-banner" data-reveal>
+        <div class="cta-banner-body">
+          <h2>Not sure which option fits?</h2>
+          <p>Tell us about your medication and delivery needs — a pharmacist will walk you through pickup, courier and compounding timelines.</p>
+          <a href="contact.html" class="btn btn-light">Talk to a Pharmacist</a>
+        </div>
+        <span class="cta-banner-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="display: block; margin-bottom: 1rem;">Mediva.</a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Licensed Independent Pharmacy & Compounding Center. Providing expert clinical care to the community.</p>
+          <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-secondary);">License #PH-9923841</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="prescription.html#delivery">Home Delivery</a></li>
+            <li><a href="diabetic-care.html">Diabetic Care</a></li>
+      <li><a href="prescription.html">Prescription</a></li>
+            <li><a href="prescription.html">Submit Prescription</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours & Location</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>123 Wellness Blvd.</li>
+            <li>Suite 100, Healthcare District</li>
+            <li style="margin-top: 1rem;">Mon - Fri: 8:00 AM - 7:00 PM</li>
+            <li>Saturday: 9:00 AM - 3:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
+            <li>Phone: (555) 123-4567</li>
+            <li>Fax: (555) 123-4568</li>
+            <li style="margin-top: 1rem; color: var(--error-color); font-weight: 500;">Emergency After-Hours:</li>
+            <li>Call 911 or proceed to nearest ER.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mediva Pharmacy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Inline script just for toggling the file upload visibility based on select
+    function toggleFileUpload(val) {
+      const uploadGroup = document.getElementById('file_upload_group');
+      const fileInput = document.getElementById('rx_file');
+      if (val === 'new') {
+        uploadGroup.style.display = 'block';
+        // The main.js logic handles the required validation if it's 'new'
+      } else {
+        uploadGroup.style.display = 'none';
+        fileInput.value = ''; // Clear file if they switch back to refill
+        fileInput.classList.remove('error', 'success');
+        const err = fileInput.nextElementSibling;
+        if(err && err.classList.contains('form-error')) err.style.display = 'none';
+      }
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

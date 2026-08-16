@@ -1,0 +1,49 @@
+/* RTL Overrides for Mediva Template */
+
+[dir="rtl"] {
+  /* Direction and Text Alignment */
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .section-header,
+[dir="rtl"] .section-header p,
+[dir="rtl"] .card,
+[dir="rtl"] .auth-container,
+[dir="rtl"] .footer-bottom,
+[dir="rtl"] .hero-content.centered {
+  text-align: center; /* Preserve center alignment where intended */
+}
+
+/* Hero Section */
+[dir="rtl"] .hero-image {
+  right: auto;
+  left: 0;
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Drawer / Hamburger */
+[dir="rtl"] .drawer {
+  right: auto;
+  left: -100%;
+  transition: left 0.3s ease;
+}
+
+[dir="rtl"] .drawer.open {
+  left: 0;
+}
+
+/* Margin and Padding logical adjustments (when logical properties are insufficient) */
+[dir="rtl"] .btn {
+  /* If icons are inside buttons, space them properly */
+  gap: 0.5rem;
+}
+
+[dir="rtl"] .nav-actions {
+  gap: var(--spacing-3);
+}
+
+[dir="rtl"] .nav-menu {
+  gap: var(--spacing-4);
+}

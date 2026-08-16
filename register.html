@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediva | Register</title>
+  <meta name="description" content="Create a Mediva account to submit prescriptions, track refills and book pharmacist consultations.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="auth-page">
+
+  <!-- Floating controls (top-right; flips to top-left in RTL) -->
+  <div class="auth-toggles">
+    <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+      <!-- Icon injected by JS -->
+    </button>
+    <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+    </button>
+  </div>
+
+  <main class="auth-container">
+    <a href="index.html" class="auth-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pill"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m7.3 12.5 4.2 4.2"/></svg>
+      MEDIVA
+    </a>
+
+    <h1>Join Mediva</h1>
+    <p class="auth-subtitle">Create an account to submit prescriptions &amp; track deliveries</p>
+
+    <form action="#" method="POST" data-validate="true" novalidate style="text-align: start;">
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name</label>
+        <input type="text" id="name" name="name" class="form-control" autocomplete="name" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <div class="password-field">
+          <input type="password" id="password" name="password" class="form-control" autocomplete="new-password" required>
+          <button type="button" class="password-toggle" aria-label="Show password"></button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="confirm_password">Confirm Password</label>
+        <div class="password-field">
+          <input type="password" id="confirm_password" name="confirm_password" class="form-control" autocomplete="new-password" required>
+          <button type="button" class="password-toggle" aria-label="Show password"></button>
+        </div>
+      </div>
+
+      <div class="auth-meta">
+        <label class="auth-check" for="terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          <span>I agree to the <a href="#">Terms &amp; Conditions</a> and the <a href="#">Privacy Policy</a>.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-auth">Create Account</button>
+    </form>
+
+    <div class="auth-divider">or</div>
+
+    <div class="social-login">
+      <button type="button" class="btn btn-outline" style="width: 100%; border-color: var(--border-color); color: var(--text-primary); font-weight: 500;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+        Continue with Google
+      </button>
+      <button type="button" class="btn btn-outline" style="width: 100%; border-color: var(--border-color); color: var(--text-primary); font-weight: 500;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.468 2.243-1.232 3.043-.817.87-2.166 1.546-3.286 1.46-.14-1.101.42-2.27 1.157-3.019.83-.851 2.278-1.5 3.361-1.484zM20.9 17.096c-.554 1.269-.81 1.836-1.52 2.96-.99 1.564-2.386 3.513-4.115 3.527-1.537.014-1.933-1.001-4.02-.989-2.086.011-2.522 1.008-4.06.993-1.729-.014-3.05-1.774-4.04-3.338C.5 16.09.2 11.026 1.9 8.335c1.208-1.91 3.114-3.03 4.906-3.03 1.824 0 2.97 1.001 4.478 1.001 1.462 0 2.354-1.003 4.464-1.003 1.595 0 3.285.868 4.49 2.368-3.945 2.161-3.305 7.792.663 9.425z"/></svg>
+        Continue with Apple
+      </button>
+    </div>
+
+    <p class="auth-footer">
+      Already have an account? <a href="login.html" style="font-weight: 500;">Login here</a>
+    </p>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
