@@ -206,6 +206,10 @@ section {
   height: 44px;
   width: auto;
   color: var(--primary-color);
+  /* The wordmark is always LTR. Without this it inherits dir="rtl" from the
+     document and lays out backwards from its x anchor, over the pill mark. */
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
 .nav-menu {
@@ -675,6 +679,12 @@ h3, h4 { letter-spacing: -0.02em; }
   outline: 2px solid var(--primary-color);
   outline-offset: 3px;
   border-radius: 4px;
+}
+/* Round controls keep their own shape — the 4px default above would square off
+   the focus ring on the theme/RTL toggles and the footer social icons. */
+.icon-btn:focus-visible,
+.footer-social a:focus-visible {
+  border-radius: 50%;
 }
 
 /* Eyebrow label above headings */
@@ -1665,7 +1675,8 @@ section,
 .auth-brand .site-logo { height: 44px; width: auto; }
 
 .auth-container h1 {
-  font-size: clamp(1.5rem, 6vw, 1.85rem);
+  /* Sits just under the brand lockup, so it stays subordinate to it */
+  font-size: clamp(1.15rem, 4vw, 1.35rem);
   text-transform: uppercase;
   letter-spacing: -0.02em;
   margin-bottom: var(--spacing-2);
@@ -1791,6 +1802,23 @@ section,
 @media (max-width: 767px) {
   .grid-3up { grid-template-columns: minmax(0, 1fr); }
   .grid-3up > :nth-child(3) { grid-column: auto; width: auto; }
+}
+
+/* .grid-even — for 3-up grids holding an even number of cards (the blog list).
+   The orphan rule above would centre the third card at half width, so cancel
+   it, and hold two columns down to small phones instead of stacking at 768. */
+@media (max-width: 1023px) {
+  .grid-even > :nth-child(3) {
+    grid-column: auto;
+    width: auto;
+    margin-inline: 0;
+  }
+}
+@media (max-width: 767px) {
+  .grid-even { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .grid-even { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* Compounding Page Services Grid (6 cards) */
