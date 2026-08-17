@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mediva | Submit Prescription & Delivery</title>
-  <meta name="description" content="Submit your new prescription or request a refill online. Learn about Mediva's fast and discreet home delivery service.">
-  
+  <meta name="description"
+    content="Submit your new prescription or request a refill online. Learn about Mediva's fast and discreet home delivery service.">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
 
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
+
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="logo">Mediva.</a>
-      
+      <a href="index.html" class="logo"><svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 60" role="img" aria-label="Mediva"><g fill="none"><g transform="translate(30,30) rotate(-20)"><rect x="-20" y="-9" width="40" height="18" rx="9" ry="9" fill="none" stroke="currentColor" stroke-width="3"/><line x1="0" y1="-9" x2="0" y2="9" stroke="currentColor" stroke-width="3"/><path d="M -20 0 a 9 9 0 0 1 9 -9 h 11 v 18 h -11 a 9 9 0 0 1 -9 -9 z" fill="currentColor"/></g><text x="68" y="38" font-family="'Poppins','Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="0.5" fill="currentColor">Mediva</text></g></svg></a>
+
       <nav>
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -33,11 +36,18 @@
       <div class="nav-actions">
         <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL direction">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-arrow-left-right">
+            <path d="M8 3 4 7l4 4" />
+            <path d="M4 7h16" />
+            <path d="m16 21 4-4-4-4" />
+            <path d="M20 17H4" />
+          </svg>
         </button>
         <a href="login.html" class="btn btn-primary">Login</a>
       </div>
-      
+
       <button class="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -48,7 +58,7 @@
   <div class="drawer-overlay"></div>
   <aside class="drawer">
     <div class="drawer-header">
-      <span class="logo">Mediva.</span>
+      <span class="logo"><svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 60" role="img" aria-label="Mediva"><g fill="none"><g transform="translate(30,30) rotate(-20)"><rect x="-20" y="-9" width="40" height="18" rx="9" ry="9" fill="none" stroke="currentColor" stroke-width="3"/><line x1="0" y1="-9" x2="0" y2="9" stroke="currentColor" stroke-width="3"/><path d="M -20 0 a 9 9 0 0 1 9 -9 h 11 v 18 h -11 a 9 9 0 0 1 -9 -9 z" fill="currentColor"/></g><text x="68" y="38" font-family="'Poppins','Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="0.5" fill="currentColor">Mediva</text></g></svg></span>
       <button class="close-drawer" aria-label="Close menu">&times;</button>
     </div>
 
@@ -82,14 +92,15 @@
 
   <!-- Main Content -->
   <main>
-    
+
     <!-- Prescription Form Section -->
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section class="page-hero has-image" style="background-image: url('assets/images/page-hero-prescription.jpg');">
+      <div class="hero-veil"></div>
       <div class="container">
         <div class="section-header" data-reveal>
           <span class="eyebrow">Secure Intake</span>
-          <h1 style="font-size: var(--text-h2);">Submit Your Prescription</h1>
+          <h1>Submit Your Prescription</h1>
           <p>Fast, secure, and HIPAA-compliant processing for your medication.</p>
         </div>
       </div>
@@ -98,14 +109,22 @@
     <section id="prescription-form" class="container">
 
       <div class="form-shell">
-        
+
         <form data-validate="true" novalidate id="rxForm">
           <!-- Prescription Placeholder Endpoint -->
           <!-- action="https://secure-hipaa-endpoint.placeholder.com/submit" method="POST" enctype="multipart/form-data" -->
 
-          <div style="background-color: rgba(47, 107, 138, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock" style="color: var(--primary-color); flex-shrink: 0;"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <p style="font-size: 0.9rem; margin-bottom: 0;"><strong>Privacy & Confidentiality Notice:</strong> Your information is transmitted securely. We adhere to strict HIPAA guidelines. Only our licensed pharmacists and clinical staff will review your submission.</p>
+          <div
+            style="background-color: rgba(47, 107, 138, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-lock" style="color: var(--primary-color); flex-shrink: 0;">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <p style="font-size: 0.9rem; margin-bottom: 0;"><strong>Privacy & Confidentiality Notice:</strong> Your
+              information is transmitted securely. We adhere to strict HIPAA guidelines. Only our licensed pharmacists
+              and clinical staff will review your submission.</p>
           </div>
 
           <div class="form-group">
@@ -120,7 +139,8 @@
           <div class="form-group" id="file_upload_group" style="display: none;">
             <label class="form-label" for="rx_file">Upload Prescription (JPG, PNG, PDF) *</label>
             <input type="file" id="rx_file" name="rx_file" class="form-control" accept=".jpg,.jpeg,.png,.pdf">
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Max file size: 5MB. Ensure the doctor's name, your name, and medication details are clearly visible.</p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Max file size: 5MB. Ensure
+              the doctor's name, your name, and medication details are clearly visible.</p>
           </div>
 
           <div class="form-row">
@@ -166,16 +186,20 @@
 
           <div class="form-group">
             <label class="form-label" for="notes">Notes or Special Instructions (Optional)</label>
-            <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="e.g., Allergies, compounding flavors..."></textarea>
+            <textarea id="notes" name="notes" class="form-control" rows="3"
+              placeholder="e.g., Allergies, compounding flavors..."></textarea>
           </div>
 
           <!-- Inline Success Message (Hidden by default) -->
-          <div class="form-success-message" style="display: none; background-color: rgba(56, 161, 105, 0.1); color: var(--success-color); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--success-color);">
+          <div class="form-success-message"
+            style="display: none; background-color: rgba(56, 161, 105, 0.1); color: var(--success-color); padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--success-color);">
             <strong style="display: block; margin-bottom: 0.25rem;">Prescription Submitted Successfully!</strong>
-            Our pharmacists are reviewing your request. We will contact you at the provided phone number to confirm fulfillment details.
+            Our pharmacists are reviewing your request. We will contact you at the provided phone number to confirm
+            fulfillment details.
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Securely Submit Request</button>
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Securely
+            Submit Request</button>
         </form>
 
       </div>
@@ -200,8 +224,11 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-panel-inner">
-                  <p>Your submission lands in an encrypted queue that only licensed staff can open. A pharmacist verifies the prescriber, checks your profile for interactions and duplicate therapy, then runs your insurance.</p>
-                  <p>If anything needs clarifying we call your prescriber directly — you don't have to chase it. You get an SMS at intake and again the moment your medication is ready.</p>
+                  <p>Your submission lands in an encrypted queue that only licensed staff can open. A pharmacist
+                    verifies the prescriber, checks your profile for interactions and duplicate therapy, then runs your
+                    insurance.</p>
+                  <p>If anything needs clarifying we call your prescriber directly — you don't have to chase it. You get
+                    an SMS at intake and again the moment your medication is ready.</p>
                 </div>
               </div>
             </div>
@@ -213,8 +240,11 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-panel-inner">
-                  <p>A compounded preparation is made from raw ingredients rather than pulled off a shelf. The pharmacist selects the base, calculates the strength, prepares it in our sterile lab and then documents a quality check before release.</p>
-                  <p>That process runs 24–48 hours for most formulations. Priority handling can bring it to roughly 24 hours where the formulation allows.</p>
+                  <p>A compounded preparation is made from raw ingredients rather than pulled off a shelf. The
+                    pharmacist selects the base, calculates the strength, prepares it in our sterile lab and then
+                    documents a quality check before release.</p>
+                  <p>That process runs 24–48 hours for most formulations. Priority handling can bring it to roughly 24
+                    hours where the formulation allows.</p>
                 </div>
               </div>
             </div>
@@ -226,8 +256,11 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-panel-inner">
-                  <p>We bill most major commercial plans, Medicare Part D and state Medicaid. Compounded preparations are handled plan-by-plan, so we verify coverage before we begin and tell you the out-of-pocket figure first.</p>
-                  <p>If a medication isn't covered, we look for a therapeutically equivalent option or a discount-card price and walk you through both.</p>
+                  <p>We bill most major commercial plans, Medicare Part D and state Medicaid. Compounded preparations
+                    are handled plan-by-plan, so we verify coverage before we begin and tell you the out-of-pocket
+                    figure first.</p>
+                  <p>If a medication isn't covered, we look for a therapeutically equivalent option or a discount-card
+                    price and walk you through both.</p>
                 </div>
               </div>
             </div>
@@ -239,8 +272,11 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-panel-inner">
-                  <p>Submissions are transmitted over an encrypted connection and stored under HIPAA-compliant controls. Access is limited to the licensed pharmacists and clinical staff working your request, and every access is logged.</p>
-                  <p>We never sell or share your information for marketing, and delivery packaging carries no indication of its contents.</p>
+                  <p>Submissions are transmitted over an encrypted connection and stored under HIPAA-compliant controls.
+                    Access is limited to the licensed pharmacists and clinical staff working your request, and every
+                    access is logged.</p>
+                  <p>We never sell or share your information for marketing, and delivery packaging carries no indication
+                    of its contents.</p>
                 </div>
               </div>
             </div>
@@ -252,7 +288,9 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-panel-inner">
-                  <p>Yes — choose "Refill" above and note the current pharmacy in the instructions field. We contact them, pull the remaining refills across, and confirm with you once the transfer clears. It usually takes a few hours on a business day.</p>
+                  <p>Yes — choose "Refill" above and note the current pharmacy in the instructions field. We contact
+                    them, pull the remaining refills across, and confirm with you once the transfer clears. It usually
+                    takes a few hours on a business day.</p>
                 </div>
               </div>
             </div>
@@ -337,14 +375,17 @@
         <div class="section-header" data-reveal>
           <span class="eyebrow">Home delivery</span>
           <h2>Follow your order, stage by stage</h2>
-          <p>Discreet, reliable delivery of your custom and standard prescriptions. Select a stage to see what happens.</p>
+          <p>Discreet, reliable delivery of your custom and standard prescriptions. Select a stage to see what happens.
+          </p>
         </div>
 
         <!-- Interactive delivery tracker -->
         <div class="delivery-shell" data-tracker data-reveal>
           <div class="tracker-modes" role="group" aria-label="Prescription type">
-            <button class="tracker-mode" type="button" data-mode="standard" aria-pressed="true">Standard prescription</button>
-            <button class="tracker-mode" type="button" data-mode="compounded" aria-pressed="false">Compounded prescription</button>
+            <button class="tracker-mode" type="button" data-mode="standard" aria-pressed="true">Standard
+              prescription</button>
+            <button class="tracker-mode" type="button" data-mode="compounded" aria-pressed="false">Compounded
+              prescription</button>
           </div>
 
           <div class="tracker">
@@ -352,7 +393,12 @@
 
             <button class="tracker-step current" type="button">
               <span class="tracker-dot">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M9 15h6" />
+                </svg>
               </span>
               <span>
                 <span class="tracker-label">Received</span>
@@ -362,7 +408,11 @@
 
             <button class="tracker-step" type="button">
               <span class="tracker-dot">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M13 22a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V4a2 2 0 0 0-2-2h-1"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 2a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1" />
+                  <path d="M13 22a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V4a2 2 0 0 0-2-2h-1" />
+                </svg>
               </span>
               <span>
                 <span class="tracker-label">Pharmacist review</span>
@@ -372,7 +422,14 @@
 
             <button class="tracker-step" type="button">
               <span class="tracker-dot">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 2v7.31" />
+                  <path d="M14 9.3V1.99" />
+                  <path d="M8.5 2h7" />
+                  <path d="M14 9.3a6.5 6.5 0 1 1-4 0" />
+                  <path d="M5.52 16h12.96" />
+                </svg>
               </span>
               <span>
                 <span class="tracker-label">Filled &amp; sealed</span>
@@ -382,7 +439,14 @@
 
             <button class="tracker-step" type="button">
               <span class="tracker-dot">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                  <path d="M15 18H9" />
+                  <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1" />
+                  <circle cx="7" cy="18" r="2" />
+                  <circle cx="17" cy="18" r="2" />
+                </svg>
               </span>
               <span>
                 <span class="tracker-label">Out for delivery</span>
@@ -413,33 +477,54 @@
 
           <form class="zip-check" data-zip-check novalidate>
             <label class="form-label" for="zip" style="width: 100%;">Check if we deliver to you</label>
-            <input class="form-control" id="zip" name="zip" type="text" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" autocomplete="postal-code">
+            <input class="form-control" id="zip" name="zip" type="text" inputmode="numeric" maxlength="5"
+              placeholder="Enter your ZIP code" autocomplete="postal-code">
             <button class="btn btn-primary" type="submit">Check availability</button>
           </form>
           <div class="zip-result" role="status"></div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; margin-top: var(--spacing-8);">
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; margin-top: var(--spacing-8);">
 
           <div data-reveal style="text-align: center;">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-              <div style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div
+                style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-map-pin">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
               </div>
               <h3 style="margin: 0;">Service Area</h3>
             </div>
-            <p>We offer localized courier delivery within a 15-mile radius of our pharmacy. For compounded medications requiring shipping outside this radius, we partner with specialized temperature-controlled medical couriers. <br><br><strong>Current Delivery Fee:</strong> Free for orders over $50 within the 15-mile radius. Standard rates apply otherwise.</p>
+            <p>We offer localized courier delivery within a 15-mile radius of our pharmacy. For compounded medications
+              requiring shipping outside this radius, we partner with specialized temperature-controlled medical
+              couriers. <br><br><strong>Current Delivery Fee:</strong> Free for orders over $50 within the 15-mile
+              radius. Standard rates apply otherwise.</p>
           </div>
 
           <div data-reveal data-reveal-delay="120" style="text-align: center;">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-              <div style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div
+                style="background-image: var(--gradient-brand); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-clock">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
               </div>
               <h3 style="margin: 0;">Timing & Tracking</h3>
             </div>
-            <p><strong>Standard Prescriptions:</strong> Typically delivered the same or next business day.<br><strong>Compounded Prescriptions:</strong> Due to the custom preparation process, compounding takes 24-48 hours. Delivery will be scheduled immediately upon completion.<br><br>You will receive SMS notifications with tracking details once your package is out for delivery.</p>
-            <p style="margin-top: 1rem;"><a href="contact.html" style="font-weight: 500;">Contact us about a pending delivery &rarr;</a></p>
+            <p><strong>Standard Prescriptions:</strong> Typically delivered the same or next business
+              day.<br><strong>Compounded Prescriptions:</strong> Due to the custom preparation process, compounding
+              takes 24-48 hours. Delivery will be scheduled immediately upon completion.<br><br>You will receive SMS
+              notifications with tracking details once your package is out for delivery.</p>
+            <p style="margin-top: 1rem;"><a href="contact.html" style="font-weight: 500;">Contact us about a pending
+                delivery &rarr;</a></p>
           </div>
 
         </div>
@@ -452,11 +537,19 @@
       <div class="cta-banner" data-reveal>
         <div class="cta-banner-body">
           <h2>Not sure which option fits?</h2>
-          <p>Tell us about your medication and delivery needs — a pharmacist will walk you through pickup, courier and compounding timelines.</p>
+          <p>Tell us about your medication and delivery needs — a pharmacist will walk you through pickup, courier and
+            compounding timelines.</p>
           <a href="contact.html" class="btn btn-light">Talk to a Pharmacist</a>
         </div>
         <span class="cta-banner-mark" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+            <path d="M15 18H9" />
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14v10h1" />
+            <circle cx="7" cy="18" r="2" />
+            <circle cx="17" cy="18" r="2" />
+          </svg>
         </span>
       </div>
     </section>
@@ -467,9 +560,54 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="display: block; margin-bottom: 1rem;">Mediva.</a>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Licensed Independent Pharmacy & Compounding Center. Providing expert clinical care to the community.</p>
+          <a href="index.html" class="logo" style="display: block; margin-bottom: 1rem;"><svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 60" role="img" aria-label="Mediva"><g fill="none"><g transform="translate(30,30) rotate(-20)"><rect x="-20" y="-9" width="40" height="18" rx="9" ry="9" fill="none" stroke="currentColor" stroke-width="3"/><line x1="0" y1="-9" x2="0" y2="9" stroke="currentColor" stroke-width="3"/><path d="M -20 0 a 9 9 0 0 1 9 -9 h 11 v 18 h -11 a 9 9 0 0 1 -9 -9 z" fill="currentColor"/></g><text x="68" y="38" font-family="'Poppins','Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="0.5" fill="currentColor">Mediva</text></g></svg></a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Licensed Independent Pharmacy &amp; Compounding
+            Center. Providing expert clinical care to the community.</p>
           <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-secondary);">License #PH-9923841</p>
+          <ul class="footer-social" aria-label="Mediva on social media">
+            <li>
+              <a href="#" aria-label="Mediva on Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Mediva on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="20" x="2" y="2" rx="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Mediva on X">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.53 3h3.14l-6.86 7.84L21.75 21h-5.9l-4.62-6.04L5.94 21H2.8l7.33-8.38L2.5 3h6.05l4.18 5.52L17.53 3Zm-1.1 16.13h1.74L7.65 4.78H5.79l10.64 14.35Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Mediva on LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Mediva on YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M23.5 6.5a3.02 3.02 0 0 0-2.12-2.14C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.62 24 12 24 12s0-3.62-.5-5.5ZM9.6 15.57V8.43L15.82 12 9.6 15.57Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -477,12 +615,12 @@
             <li><a href="services.html">Our Services</a></li>
             <li><a href="prescription.html#delivery">Home Delivery</a></li>
             <li><a href="diabetic-care.html">Diabetic Care</a></li>
-      <li><a href="prescription.html">Prescription</a></li>
+            <li><a href="prescription.html">Prescription</a></li>
             <li><a href="prescription.html">Submit Prescription</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Hours & Location</h4>
+          <h4>Hours &amp; Location</h4>
           <ul class="footer-links" style="color: var(--text-secondary); font-size: 0.95rem;">
             <li>123 Wellness Blvd.</li>
             <li>Suite 100, Healthcare District</li>
@@ -520,10 +658,11 @@
         fileInput.value = ''; // Clear file if they switch back to refill
         fileInput.classList.remove('error', 'success');
         const err = fileInput.nextElementSibling;
-        if(err && err.classList.contains('form-error')) err.style.display = 'none';
+        if (err && err.classList.contains('form-error')) err.style.display = 'none';
       }
     }
   </script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

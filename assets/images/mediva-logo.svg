@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 60" width="170" height="60">
+  <g fill="none">
+    <!-- Pill icon: clean capsule, tilted 20deg, outlined with a center divider -->
+    <g transform="translate(30,30) rotate(-20)">
+      <!-- Capsule outline -->
+      <rect x="-20" y="-9" width="40" height="18" rx="9" ry="9"
+            fill="none" stroke="#2F6B8A" stroke-width="3"/>
+      <!-- Center divider line -->
+      <line x1="0" y1="-9" x2="0" y2="9" stroke="#2F6B8A" stroke-width="3"/>
+      <!-- Left half fill -->
+      <path d="M -20 0
+               a 9 9 0 0 1 9 -9
+               h 11
+               v 18
+               h -11
+               a 9 9 0 0 1 -9 -9
+               z" fill="#2F6B8A"/>
+    </g>
+
+    <!-- Wordmark -->
+    <text x="68" y="38"
+          font-family="'Poppins','Segoe UI',Helvetica,Arial,sans-serif"
+          font-size="26"
+          font-weight="600"
+          letter-spacing="0.5"
+          fill="#2F6B8A">Mediva</text>
+  </g>
+</svg>
